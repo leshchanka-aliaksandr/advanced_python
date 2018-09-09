@@ -1,4 +1,5 @@
-from threading import Semaphore, Thread
+from threading import Semaphore
+from threading import Thread
 
 
 def count_even(s_even, s_odd):

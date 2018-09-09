@@ -1,4 +1,5 @@
-from threading import Event, Thread
+from threading import Event
+from threading import Thread
 
 
 def count_even(e_even, e_odd):

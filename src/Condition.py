@@ -1,4 +1,5 @@
-from threading import Condition, Thread
+from threading import Condition
+from threading import Thread
 
 
 def count_even(c_even, c_odd):
