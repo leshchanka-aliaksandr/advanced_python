@@ -28,7 +28,7 @@ if __name__ == "__main__":
     )
     for i in range(1, n):
         philos.append(
-            Process(target=philo, args=(i, table, i, (i+1)%n))
+            Process(target=philo, args=(i, table, i, (i + 1) % n))
         )
 
     for p in philos:
