@@ -4,6 +4,14 @@ import time
 
 
 def philo(id: int, table: list, left: int, right: int):
+    """
+
+    :param id: id of philo
+    :param table: table object
+    :param left: left hand fork
+    :param right: right hand fork
+    :return: None
+    """
     table[left].acquire()
     print(f"{id} take first fork")
     time.sleep(1)
