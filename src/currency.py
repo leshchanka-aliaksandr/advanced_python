@@ -14,13 +14,13 @@ class Money:
         return f"{self._count} {self._currency}"
 
     def __add__(self, other):
-        count = self._count + other._count * self._currency_rate(
+        count = self._count + other._count / self._currency_rate(
             self._currency, other._currency)
         return Money(count, self._currency)
 
     def __radd__(self, other):
         if isinstance(other, Money):
-            count = self._count + other._count * self._currency_rate(
+            count = self._count + other._count / self._currency_rate(
                 self._currency, other._currency)
             return Money(count, self._currency)
         else:
