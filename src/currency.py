@@ -10,8 +10,8 @@ class Money:
         self._count = count
         self._currency = currency
 
-    def __repr__(self):
-        return f"{self._count} {self._currency}"
+    def __str__(self):
+        return "{:.2f} {}".format(self._count, self._currency)
 
     def __add__(self, other):
         count = self._count + other._count / self._currency_rate(
