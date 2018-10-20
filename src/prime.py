@@ -3,7 +3,9 @@ import math
 
 
 async def is_prime(x, result):
-    for i in range(2, int(math.sqrt(x))):
+    if x == 1:
+        return
+    for i in range(2, x):
         if i % 100 == 0:
             await asyncio.sleep(1)
         if x % i == 0:
